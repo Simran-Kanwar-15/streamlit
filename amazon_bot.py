@@ -58,7 +58,10 @@ with st.sidebar:
     
     st.markdown("### ⚙️ Settings")
     
+    try:
     env_api_key = os.getenv("GROQ_API_KEY", "") or st.secrets.get("GROQ_API_KEY", "")
+except:
+    env_api_key = os.getenv("GROQ_API_KEY", "")
     
     api_key = st.text_input("Groq API Key", value=env_api_key, type="password", help="Loaded from .env or enter here.")
     
