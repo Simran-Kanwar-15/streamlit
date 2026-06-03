@@ -8,28 +8,49 @@ st.set_page_config(
 )
 
 def main():
-    # Adding some custom CSS for better aesthetics
+    # Adding some custom CSS for premium aesthetics
     st.markdown("""
         <style>
-        .main {
-            background-color: #f8f9fa;
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+        
+        html, body, [data-testid="stAppViewContainer"], [data-testid="stHeader"], [data-testid="stSidebar"], 
+        input, select, textarea, button, p, span, div, li, a, label {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            letter-spacing: 0.01em;
         }
+
+        h1, h2, h3, h4, h5, h6, [data-baseweb="tab"] *, [data-testid="stExpander"] summary {
+            font-family: 'Space Grotesk', sans-serif !important;
+            font-weight: 700 !important;
+        }
+
         h1 {
-            color: #2c3e50;
-            font-family: 'Inter', sans-serif;
+            color: #1a202c;
+            font-size: 36px !important;
+            font-weight: 800 !important;
+            letter-spacing: -0.025em !important;
+            line-height: 1.15 !important;
         }
+
+        .main {
+            background-color: #f4f7f5;
+        }
+
         .stButton>button {
-            background-color: #3498db;
+            background-color: #006636;
             color: white;
-            border-radius: 5px;
+            font-family: 'Space Grotesk', sans-serif !important;
+            font-weight: 600;
+            border-radius: 8px;
             border: none;
-            padding: 0.5rem 1rem;
-            transition: all 0.3s ease;
+            padding: 0.5rem 1.25rem;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 102, 54, 0.1);
         }
         .stButton>button:hover {
-            background-color: #2980b9;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            background-color: #004b23;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 14px rgba(0, 102, 54, 0.2);
         }
         </style>
     """, unsafe_allow_html=True)
